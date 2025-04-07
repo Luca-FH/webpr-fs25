@@ -8,8 +8,10 @@ function start() {
     const userFunction = document.getElementById('user_function');
     const canvas       = document.getElementById('canvas');
 
-    const f = () => Function("x", "return "+ userFunction.value);
+    // const f = x => Math.sin(x);
+    const f = () => Function("x", "return " + userFunction.value + ";");
 
+    // todo: how to display?
     display(canvas, f());
 
     userFunction.onchange = _evt => display(canvas, f());
